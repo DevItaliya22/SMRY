@@ -81,15 +81,15 @@ export default async function RootLayout({
   return (
     <ClerkProvider appearance={clerkAppearance}>
       <html lang={locale} className="bg-background dark:bg-background" suppressHydrationWarning>
-        <Databuddy
-          clientId="638f8e5f-f436-4d00-a459-66dee9152e3c"
-          trackPerformance
-          trackWebVitals
-          trackErrors
-        />
         <body
           className={`${GeistSans.className} ${syne.variable} bg-background text-foreground`}
         >
+          <Databuddy
+            clientId="638f8e5f-f436-4d00-a459-66dee9152e3c"
+            trackPerformance
+            trackWebVitals
+            trackErrors
+          />
           {/* Structured data for SEO - placed in body for Next.js App Router compatibility */}
           <JsonLd data={organizationSchema} />
           <JsonLd data={websiteSchema} />
